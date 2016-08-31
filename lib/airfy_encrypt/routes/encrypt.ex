@@ -1,17 +1,20 @@
 defmodule AirfyEncrypt.Router.Encrypt do
   use Maru.Router
 
+  alias AirfyEncrypt.Model.Encrypt
+
   version "v1"
 
   namespace :encrypt do
     params do
-      requires :key, type: Map
+      requires :data, type: Map
     end
 
     post do
-      # get user
-      # call fs and write create pub key on disk
-      json(conn, %{created: true})
+      key = params[:user][:email]
+      data = params[:data]
+      {:ok, pub_key} = Encrypt.create(key, data)
+      json(conn, %{pub_key: pub_key})
     end
   end
 end
