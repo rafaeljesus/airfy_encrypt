@@ -4,6 +4,7 @@ defmodule AirfyEncrypt.API do
   plug CORSPlug
   plug Plug.Logger
   plug Plug.Parsers, parsers: [:json], json_decoder: Poison
+  plug AirfyEncrypt.Middleware.JwtAuth
 
   mount AirfyEncrypt.Router.Health
   mount AirfyEncrypt.Router.Token
