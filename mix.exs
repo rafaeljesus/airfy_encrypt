@@ -11,7 +11,7 @@ defmodule AirfyEncrypt.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :maru], mod: {AirfyEncrypt, []}]
+    [applications: [:logger, :maru, :rsa_ex], mod: {AirfyEncrypt, []}]
   end
 
   defp deps do
