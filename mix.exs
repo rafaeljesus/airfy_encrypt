@@ -18,6 +18,7 @@ defmodule AirfyEncrypt.Mixfile do
     [{:maru, "~> 0.10.4"},
       {:poison, "~> 2.0", override: true},
       {:cors_plug, "~> 1.1"},
+      {:joken, "~> 1.1"},
       {:rsa_ex, "~> 0.1"}]
   end
 end
