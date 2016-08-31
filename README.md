@@ -1,24 +1,34 @@
 # AirfyEncrypt
 
-**TODO: Add description**
+* Expose a http api to encrypt public keys
+* A minimal docker alpine container
+* Automatically pushes it to dockerhub if tests pass
 
 ## Installation
+```bash
+git clone https://github.com/rafaeljesus/airfy_encrypt.git
+cd airfy_encrypt
+mix deps.get
+```
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+## Running server
+To start the serve execute:
+```bash
+iex -S mix
+```
 
-  1. Add `airfy_encrypt` to your list of dependencies in `mix.exs`:
+## Contributing
+- Fork it
+- Create your feature branch (`git checkout -b my-new-feature`)
+- Commit your changes (`git commit -am 'Add some feature'`)
+- Push to the branch (`git push origin my-new-feature`)
+- Create new Pull Request
 
-    ```elixir
-    def deps do
-      [{:airfy_encrypt, "~> 0.1.0"}]
-    end
-    ```
+## Badges
 
-  2. Ensure `airfy_encrypt` is started before your application:
+[![CircleCI](https://circleci.com/gh/rafaeljesus/airfy_encrypt.svg?style=svg)](https://circleci.com/gh/rafaeljesus/airfy_encrypt)
 
-    ```elixir
-    def application do
-      [applications: [:airfy_encrypt]]
-    end
-    ```
+---
 
+> GitHub [@rafaeljesus](https://github.com/rafaeljesus) &nbsp;&middot;&nbsp;
+> Twitter [@rafaeljesus](https://twitter.com/_jesus_rafael)
